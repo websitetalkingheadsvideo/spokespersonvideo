@@ -1,0 +1,6 @@
+# FTP/SFTP config (contains credentials)
+.vscode/sftp.json
+sftp.json
+sync_config.jsonc
+
+sync_config.jsonc
