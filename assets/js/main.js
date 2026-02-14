@@ -14,12 +14,13 @@ window.addEventListener('scroll', () => {
     document.getElementById('mainNav').classList.toggle('scrolled', window.scrollY > 50);
 });
 
-// Hero play button
+// Hero: Vimeo iframe – on overlay click, add autoplay and hide overlay
 const heroPlay = document.getElementById('heroPlay');
 const heroVideo = document.getElementById('heroVideo');
-if (heroPlay && heroVideo) {
+if (heroPlay && heroVideo && heroVideo.tagName === 'IFRAME') {
     heroPlay.addEventListener('click', () => {
-        heroVideo.play();
+        const src = heroVideo.getAttribute('src') || '';
+        heroVideo.setAttribute('src', src + (src.includes('?') ? '&' : '?') + 'autoplay=1');
         heroPlay.style.opacity = '0';
         heroPlay.style.pointerEvents = 'none';
     });
@@ -44,3 +45,26 @@ document.getElementById('portfolioModal')?.addEventListener('hidden.bs.modal', (
     const iframe = document.getElementById('portfolioModalIframe');
     if (iframe) iframe.src = '';
 });
+
+// Testimonials: show 3 random on each page load
+(function () {
+    const row = document.getElementById('testimonialsRow');
+    if (!row) return;
+    const columns = Array.from(row.querySelectorAll('.testimonial-column'));
+    if (columns.length < 4) return;
+
+    function shuffle(arr) {
+        const a = arr.slice();
+        for (let i = a.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [a[i], a[j]] = [a[j], a[i]];
+        }
+        return a;
+    }
+
+    const shuffled = shuffle(columns);
+    const showCount = 3;
+    shuffled.forEach((col, i) => {
+        col.style.display = i < showCount ? '' : 'none';
+    });
+})();

@@ -15,15 +15,25 @@
                     <a href="#work" class="btn btn-outline-dark rounded-pill">See Our Work</a>
                 </div>
             </div>
+            <?php
+            $hero_vimeo_id = '1106382740';
+            $hero_vimeo_hash = '88f762d477';
+            $hero_vimeo_src = 'https://player.vimeo.com/video/' . $hero_vimeo_id . '?h=' . $hero_vimeo_hash;
+            ?>
             <div class="hero-video">
                 <div class="play-overlay" id="heroPlay">
                     <div class="play-btn">
                         <svg viewBox="0 0 24 24" fill="#1a1a1a" width="24" height="24"><polygon points="8,5 20,12 8,19"/></svg>
                     </div>
                 </div>
-                <video muted loop playsinline id="heroVideo">
-                    <source src="" type="video/mp4">
-                </video>
+                <iframe
+                    id="heroVideo"
+                    src="<?= htmlspecialchars($hero_vimeo_src) ?>"
+                    frameborder="0"
+                    allow="autoplay; fullscreen; picture-in-picture"
+                    allowfullscreen
+                    title="Hero video"
+                ></iframe>
             </div>
         </div>
     </section>

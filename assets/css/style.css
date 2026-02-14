@@ -9,8 +9,16 @@
     --card: #ffffff;
     --text: #1a1a1a;
     --text-light: #6b6b6b;
-    --accent: #ff6b35;
-    --accent-hover: #e85a2a;
+    /* Primary accent (replaces orange) */
+    --accent: #EB8526;
+    --accent-hover: #d67420;
+    /* Palette */
+    --color-1: #EB8526;
+    --color-2: #26C2EB;
+    --color-3: #AB7746;
+    --color-4: #4A8696;
+    --color-5: #3D98EB;
+    --color-6: #353E41;
     --shadow-sm: 0 2px 8px rgba(0,0,0,0.04);
     --shadow-md: 0 8px 30px rgba(0,0,0,0.06);
     --shadow-lg: 0 20px 60px rgba(0,0,0,0.08);
@@ -32,9 +40,10 @@ html { scroll-behavior: smooth; }
 
 /* ---- TYPOGRAPHY ---- */
 .logo {
-    font-family: 'Syne', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 800;
     font-size: 1.3rem;
+    line-height: 1.6;
     color: var(--text);
     text-decoration: none;
     letter-spacing: -0.5px;
@@ -52,7 +61,7 @@ html { scroll-behavior: smooth; }
 }
 
 .section-title {
-    font-family: 'Syne', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 800;
     font-size: clamp(2rem, 4vw, 3rem);
     letter-spacing: -1.5px;
@@ -82,7 +91,7 @@ html { scroll-behavior: smooth; }
     background: var(--accent-hover);
     color: white;
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(255, 107, 53, 0.3);
+    box-shadow: 0 8px 24px rgba(235, 133, 38, 0.3);
 }
 
 .btn-outline-dark.rounded-pill {
@@ -175,7 +184,7 @@ html { scroll-behavior: smooth; }
 }
 
 .hero h1 {
-    font-family: 'Syne', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 800;
     font-size: clamp(2.8rem, 6vw, 4.5rem);
     line-height: 1.08;
@@ -206,12 +215,16 @@ html { scroll-behavior: smooth; }
     position: relative;
     margin-top: 48px;
 }
-.hero-video video {
+.hero-video video,
+.hero-video iframe {
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
     display: block;
+    border: none;
 }
+.hero-video video { object-fit: cover; }
 .hero-video .play-overlay {
     position: absolute;
     inset: 0;
@@ -255,7 +268,7 @@ html { scroll-behavior: smooth; }
     opacity: 0.4;
 }
 .client-logos span {
-    font-family: 'Syne', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 700;
     font-size: 1.2rem;
     color: var(--text);
@@ -383,8 +396,11 @@ html { scroll-behavior: smooth; }
     box-shadow: var(--shadow-float);
 }
 
+/* Match talkingheads.com: portrait container, wide video cropped on sides, no black bars */
 .testimonial-video {
-    aspect-ratio: 1 / 1;
+    position: relative;
+    container-type: size;
+    aspect-ratio: 9 / 16;
     border-radius: var(--radius-sm);
     overflow: hidden;
     background: #1a1a1a;
@@ -394,6 +410,18 @@ html { scroll-behavior: smooth; }
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+/* 16:9 iframe: width from container height so it covers with no letterboxing */
+.testimonial-video iframe {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    width: calc(100cqh * 16 / 9);
+    min-width: 100%;
+    display: block;
+    border: none;
 }
 
 .stars {
@@ -448,7 +476,7 @@ html { scroll-behavior: smooth; }
 }
 
 .step-number {
-    font-family: 'Syne', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 800;
     font-size: 3rem;
     color: #f0f0f0;
@@ -492,7 +520,7 @@ html { scroll-behavior: smooth; }
 }
 
 .cta-card h2 {
-    font-family: 'Syne', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 800;
     font-size: clamp(2rem, 4vw, 3rem);
     color: white;
