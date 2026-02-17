@@ -8,6 +8,7 @@ require_once __DIR__ . '/../includes/video-types.php';
 
 $products = [
     ['slug' => 'presentation', 'title' => 'Video Presentation', 'bullets' => ['Green screen production with customizable backgrounds and branding.', 'Professional delivery with on-camera spokesperson.', 'Ideal for product demos, training, and marketing that needs a human face.', 'Consistent quality shot in our studio for a polished, on-brand look.']],
+    ['slug' => 'viral', 'title' => 'Viral Videos', 'bullets' => ['Shareable video content for social media that promotes your brand, increases engagement, and drives traffic across Facebook, Instagram, YouTube, and TikTok.', 'Professional viral commercial production — relatable, on-strategy content that\'s built to be shared.', 'Ideal for social campaigns, brand awareness, and video marketing that reaches a wider audience.']],
     ['slug' => 'whiteboard', 'title' => 'Whiteboard Videos', 'bullets' => ['Hand-drawn visuals that turn complex ideas into clear, memorable stories.', 'Ideal for explainers, training, and product demos — viewers retain more with whiteboard storytelling.', 'Engaging hand-drawn style']],
     ['slug' => 'animation', 'title' => 'Custom Animated Videos', 'bullets' => ['2D  animation tailored to your story and message.', 'Brand-aligned design — colors, fonts, and style that match your identity.', 'Ideal for explainers, product launches, and campaigns that stand out.', 'From concept to delivery, we handle scripting, storyboards, and final cut.']],
     ['slug' => 'testimonials', 'title' => 'Testimonial Videos', 'bullets' => ['Customer success stories told in your customers\' own words — real people, real results.', 'Authentic endorsements that build trust and credibility for your brand and offerings.', 'Ideal for landing pages, sales materials, and social proof — viewers connect with peer stories.']],
@@ -46,10 +47,16 @@ include __DIR__ . '/../includes/header.php';
                 <div class="row g-4 align-items-center">
                     <div class="col-lg-5 d-flex flex-column justify-content-center">
                     <h3 class="section-title mb-3">
-                        <?php if ($product['slug'] === 'whiteboard'): ?>
+                        <?php if ($product['slug'] === 'presentation'): ?>
+                        <a href="/products/video-presentation.php" class="text-decoration-none text-dark"><?= htmlspecialchars($product['title']) ?></a>
+                        <?php elseif ($product['slug'] === 'viral'): ?>
+                        <a href="/products/viral-videos.php" class="text-decoration-none text-dark"><?= htmlspecialchars($product['title']) ?></a>
+                        <?php elseif ($product['slug'] === 'whiteboard'): ?>
                         <a href="/products/whiteboard.php" class="text-decoration-none text-dark"><?= htmlspecialchars($product['title']) ?></a>
                         <?php elseif ($product['slug'] === 'animation'): ?>
                         <a href="/products/animation.php" class="text-decoration-none text-dark"><?= htmlspecialchars($product['title']) ?></a>
+                        <?php elseif ($product['slug'] === 'testimonials'): ?>
+                        <a href="/products/testimonials.php" class="text-decoration-none text-dark"><?= htmlspecialchars($product['title']) ?></a>
                         <?php else: ?>
                         <?= htmlspecialchars($product['title']) ?>
                         <?php endif; ?>
@@ -59,12 +66,17 @@ include __DIR__ . '/../includes/header.php';
                         <li class="mb-2 text-secondary"><?= htmlspecialchars($bullet) ?></li>
                         <?php endforeach; ?>
                     </ul>
-                    <?php
-                        $getInfoHref = '/#contact';
-                        if ($product['slug'] === 'whiteboard') $getInfoHref = '/products/whiteboard.php';
-                        elseif ($product['slug'] === 'animation') $getInfoHref = '/products/animation.php';
-                        ?>
-                    <a href="<?= htmlspecialchars($getInfoHref) ?>" class="btn btn-accent align-self-start">Get Info</a>
+                    <?php if ($product['slug'] === 'presentation'): ?>
+                    <a href="/products/video-presentation.php" class="btn btn-accent align-self-start">Get Info</a>
+                    <?php elseif ($product['slug'] === 'viral'): ?>
+                    <a href="/products/viral-videos.php" class="btn btn-accent align-self-start">Get Info</a>
+                    <?php elseif ($product['slug'] === 'whiteboard'): ?>
+                    <a href="/products/whiteboard.php" class="btn btn-accent align-self-start">Get Info</a>
+                    <?php elseif ($product['slug'] === 'animation'): ?>
+                    <a href="/products/animation.php" class="btn btn-accent align-self-start">Get Info</a>
+                    <?php elseif ($product['slug'] === 'testimonials'): ?>
+                    <a href="/products/testimonials.php" class="btn btn-accent align-self-start">Get Info</a>
+                    <?php endif; ?>
                     </div>
                     <div class="col-lg-7">
                     <div class="row g-2">

@@ -1,5 +1,19 @@
 # Spokesperson Video - Version History
 
+## v0.3.4 (2025-02-17)
+
+### Session Summary
+
+**New product pages (same style/layout as whiteboard.php):**
+- `products/video-presentation.php` — Video Presentation Production: hero, examples (Presentation=true), Featured (presentation_content), Custom Video Presentation, benefits, explainer, questions, related styles.
+- `products/viral-videos.php` — Viral Video Production: hero, examples (viral=true), Viral in Action (viral_content), Custom Viral Videos, benefits, Social Media Viral Commercial copy, questions, related styles.
+- `products/testimonials.php` — Testimonial Video Production: hero, examples (testimonials=true), Testimonials in Action (testimonials_content), Custom Testimonial Videos, benefits, explainer, questions, related styles.
+
+**Products index (`products/index.php`):**
+- Get Info and title links only for styles with a dedicated page; use absolute paths `/products/...`. Presentation → video-presentation.php; Viral → viral-videos.php; Whiteboard → whiteboard.php; Animation → animation.php; Testimonials → testimonials.php. No Get Info for Product Videos (no page). Removed CTA include from products page.
+
+---
+
 ## v0.3.3 (2025-02-17)
 
 ### Session Summary
@@ -120,4 +134,4 @@
 
 ---
 
-## Current Version: 0.3.3
+## Current Version: 0.3.4
