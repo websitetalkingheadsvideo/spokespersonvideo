@@ -19,39 +19,19 @@
              */
             require_once __DIR__ . '/connect-videos.php';
             require_once __DIR__ . '/video_schema_vimeo.php';
+            require_once __DIR__ . '/video-types.php';
 
             if (!isset($show) || $show === null || $show === '') $show = 99;
             $show = (int) $show;
             if (!isset($columns)) $columns = 3;
             if (!isset($rand)) $rand = false;
 
-            $typeSwitch = function (string $t): array {
-                $t = strtolower($t);
-                switch ($t) {
-                    case 'whiteboard':   return ['WHERE whiteboard=true', 'Whiteboard'];
-                    case 'animation':    return ['WHERE animation=true', 'Animation'];
-                    case 'presentation': return ['WHERE Presentation=true', 'Presentation'];
-                    case 'demo':         return ['WHERE demo=true', 'Demo'];
-                    case 'product':     return ['WHERE product=true', 'Product'];
-                    case 'typography':  return ['WHERE Typography=true', 'Typography'];
-                    case 'elearning':   return ['WHERE elearning=true', 'eLearning'];
-                    case 'specialty':   return ['WHERE specialty=true', 'Specialty'];
-                    case 'logo':        return ['WHERE logo=true', 'Logo'];
-                    case 'motion':      return ['WHERE motion=true', 'Motion'];
-                    case 'testimonials': return ['WHERE testimonials=true', 'Testimonials'];
-                    case '3d':          return ['WHERE 3d=true', '3D'];
-                    case 'viral':       return ['WHERE viral=true', 'Viral'];
-                    case 'app':         return ['WHERE app=true', 'App'];
-                    default:            return ['WHERE 1=1', 'Video'];
-                }
-            };
-
             $projects = [];
             $displayTypes = ['whiteboard', 'presentation', 'product', '3d', 'viral', 'animation'];
 
             if (isset($type) && strtolower(trim((string) $type)) === 'display') {
                 foreach ($displayTypes as $t) {
-                    [$where, $tagLabel] = $typeSwitch($t);
+                    [$where, $tagLabel] = video_type_switch($t);
                     $sql = 'SELECT Name, description, vimeo, thumbnail_webm FROM videos ' . $where . ' ORDER BY `rank` ASC LIMIT 1';
                     $result = $conn->query($sql);
                     if ($result && $result->num_rows > 0) {
@@ -61,7 +41,7 @@
                 }
             } elseif (!empty($types) && is_array($types)) {
                 foreach ($types as $t) {
-                    [$where, $tagLabel] = $typeSwitch($t);
+                    [$where, $tagLabel] = video_type_switch($t);
                     $sql = 'SELECT Name, description, vimeo, thumbnail_webm FROM videos ' . $where . ' ORDER BY `rank` ASC LIMIT 1';
                     $result = $conn->query($sql);
                     if ($result && $result->num_rows > 0) {
@@ -71,7 +51,7 @@
                 }
             } else {
                 $typeVal = isset($type) ? strtolower(trim((string) $type)) : 'presentation';
-                [$where, $tagLabel] = $typeSwitch($typeVal);
+                [$where, $tagLabel] = video_type_switch($typeVal);
                 $sql = 'SELECT Name, description, vimeo, thumbnail_webm FROM videos ' . $where;
                 $sql .= $rand ? ' ORDER BY RAND()' : ' ORDER BY `rank` ASC';
                 if ($show > 0) $sql .= ' LIMIT ' . (int) $show;
@@ -131,19 +111,5 @@
                 endforeach; ?>
             </div>
         </div>
-
-        <div class="modal fade" id="portfolioModal" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header border-0 pb-0">
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body p-0">
-                        <div class="ratio ratio-16x9">
-                            <iframe id="portfolioModalIframe" src="" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <?php include __DIR__ . '/portfolio-modal.php'; ?>
     </section>

@@ -8,7 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <?php $path_prefix = $path_prefix ?? ''; ?>
+    <link rel="stylesheet" href="<?= $path_prefix ?>assets/css/style.css">
 </head>
 <body>
 
@@ -20,6 +21,7 @@
                 <ul class="nav-links d-none d-md-flex align-items-center gap-4 list-unstyled mb-0">
                     <li><a href="#work">Work</a></li>
                     <li><a href="#services">Services</a></li>
+                    <li><a href="/products/">Products</a></li>
                     <li><a href="#testimonials">About</a></li>
                     <li><a href="#contact" class="btn btn-accent">Start a Project</a></li>
                 </ul>
@@ -41,6 +43,7 @@
         <div class="offcanvas-body d-flex flex-column gap-3">
             <a href="#work" class="mobile-link" data-bs-dismiss="offcanvas">Work</a>
             <a href="#services" class="mobile-link" data-bs-dismiss="offcanvas">Services</a>
+            <a href="/products/" class="mobile-link" data-bs-dismiss="offcanvas">Products</a>
             <a href="#testimonials" class="mobile-link" data-bs-dismiss="offcanvas">About</a>
             <a href="#contact" class="btn btn-accent mt-3" data-bs-dismiss="offcanvas">Start a Project</a>
         </div>

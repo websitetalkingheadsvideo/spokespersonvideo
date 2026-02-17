@@ -9,6 +9,7 @@
                 <ul class="footer-links d-flex gap-4 list-unstyled mb-0">
                     <li><a href="#work">Work</a></li>
                     <li><a href="#services">Services</a></li>
+                    <li><a href="/products/">Products</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <li><a href="/privacy.php">Privacy</a></li>
@@ -18,6 +19,7 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/main.js"></script>
+    <?php $path_prefix = $path_prefix ?? ''; ?>
+    <script src="<?= $path_prefix ?>assets/js/main.js"></script>
 </body>
 </html>

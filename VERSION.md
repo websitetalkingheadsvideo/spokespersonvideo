@@ -1,5 +1,30 @@
 # Spokesperson Video - Version History
 
+## v0.3.0 (2025-02-16)
+
+### Session Summary
+
+**Products page (`products/index.php`):**
+- Catalog of 11 video production styles with pricing, features, and 2x2 video grids per style
+- Uses existing portfolio modal for video playback; connects to working_videos DB
+- Path prefix support in header/footer for subdirectory asset loading
+
+**Whiteboard page (`products/whiteboard.php`):**
+- Hero, examples grid (6 videos), featured section with random whiteboard_content + videos
+- Custom Whiteboard Videos (use cases, deliverables), benefits, explainer copy, questions
+- Related Video Styles links (animation, 3d, motion, typography, presentation)
+
+**Shared components:**
+- `includes/portfolio-modal.php` — extracted from portfolio for reuse
+- `includes/random-content.php` — 3 random videos + paired content from {style}_content table
+- `includes/video-types.php` — `video_type_switch()` for slug → WHERE/label mapping
+
+**Navigation:**
+- Products link in header, footer, mobile menu
+- Whiteboard "Get Info" on products index links to whiteboard page
+
+---
+
 ## v0.2.1 (2025-02-14)
 
 ### Session Summary
@@ -43,4 +68,4 @@
 
 ---
 
-## Current Version: 0.2.1
+## Current Version: 0.3.0
