@@ -1,5 +1,20 @@
 # Spokesperson Video - Version History
 
+## v0.3.3 (2025-02-17)
+
+### Session Summary
+
+**Products index (`products/index.php`):**
+- Testimonial Videos: expanded bullet list to near Whiteboard word count (3 descriptive bullets).
+- Product Videos: expanded description list (3 descriptive bullets).
+- Motion Graphics: expanded descriptions to near Whiteboard length (3 descriptive bullets).
+- Removed sections: Stock Footage Videos, Character Animated Videos, Drone Videos, Motion Graphics.
+
+**Testimonial thumbnails (`assets/css/style.css`):**
+- `.product-section-testimonials .portfolio-thumb`: `aspect-ratio` set to `16 / 9` (videos are 16:9, not portrait).
+
+---
+
 ## v0.3.2 (2025-02-17)
 
 ### Session Summary
@@ -105,4 +120,4 @@
 
 ---
 
-## Current Version: 0.3.2
+## Current Version: 0.3.3

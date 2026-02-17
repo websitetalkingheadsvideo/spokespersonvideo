@@ -10,12 +10,8 @@ $products = [
     ['slug' => 'presentation', 'title' => 'Video Presentation', 'bullets' => ['Green screen production with customizable backgrounds and branding.', 'Professional delivery with on-camera spokesperson.', 'Ideal for product demos, training, and marketing that needs a human face.', 'Consistent quality shot in our studio for a polished, on-brand look.']],
     ['slug' => 'whiteboard', 'title' => 'Whiteboard Videos', 'bullets' => ['Hand-drawn visuals that turn complex ideas into clear, memorable stories.', 'Ideal for explainers, training, and product demos — viewers retain more with whiteboard storytelling.', 'Engaging hand-drawn style']],
     ['slug' => 'animation', 'title' => 'Custom Animated Videos', 'bullets' => ['2D  animation tailored to your story and message.', 'Brand-aligned design — colors, fonts, and style that match your identity.', 'Ideal for explainers, product launches, and campaigns that stand out.', 'From concept to delivery, we handle scripting, storyboards, and final cut.']],
-    ['slug' => 'testimonials', 'title' => 'Testimonial Videos', 'bullets' => ['Customer success stories', 'Authentic endorsements', 'Build trust']],
-    ['slug' => 'product', 'title' => 'Product Videos', 'bullets' => ['Demo and feature highlights', 'Product showcases', 'Conversion-focused']],
-    ['slug' => 'motion', 'title' => 'Motion Graphics', 'bullets' => ['Titles and lower thirds', 'Data visualization', 'Kinetic typography']],
-    ['slug' => 'presentation', 'title' => 'Stock Footage Videos', 'bullets' => ['Stock + voiceover', 'Cost-effective', 'Quick turnaround']],
-    ['slug' => 'animation', 'title' => 'Character Animated Videos', 'bullets' => ['Character-driven storytelling', 'Memorable mascots', 'Engaging narratives']],
-    ['slug' => 'specialty', 'title' => 'Drone Videos', 'bullets' => ['Aerial footage', 'Stunning perspectives', 'Professional cinematography']],
+    ['slug' => 'testimonials', 'title' => 'Testimonial Videos', 'bullets' => ['Customer success stories told in your customers\' own words — real people, real results.', 'Authentic endorsements that build trust and credibility for your brand and offerings.', 'Ideal for landing pages, sales materials, and social proof — viewers connect with peer stories.']],
+    ['slug' => 'product', 'title' => 'Product Videos', 'bullets' => ['Demo and feature highlights that show your product in action, not just on the page.', 'Product showcases tailored for e‑commerce, sales, and marketing — conversion-focused.', 'Ideal for landing pages, ads, and trade shows — clear, professional, on-brand delivery.']],
 ];
 
 include __DIR__ . '/../includes/header.php';
