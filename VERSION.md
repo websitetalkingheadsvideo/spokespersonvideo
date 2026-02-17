@@ -1,5 +1,28 @@
 # Spokesperson Video - Version History
 
+## v0.3.1 (2025-02-17)
+
+### Session Summary
+
+**Animation product page (`products/animation.php`):**
+- New page matching whiteboard layout: hero, examples grid (animation=true), Animation in Action (random-content), Custom Animated Videos, benefits, Animated Video copy, questions, related styles
+- Links from products index "Get Info" and title for animation slug sections
+
+**Products index (`products/index.php`):**
+- Spokesperson Videos moved to top of Video Production Styles
+- Get Info and title links for Custom Animated Videos (and other animation slug sections) point to `/products/animation.php`
+- Explainer Videos section removed (kept Custom Animated Videos)
+- Animated Logos section removed
+
+**Portfolio modal (`includes/portfolio-modal.php`):**
+- Modal header: equal vertical padding (`py-2 px-3`), `align-items-center`, close button `align-self-center` so close (X) is vertically centered
+
+**Testimonial thumbnails (`assets/css/style.css`):**
+- `.portfolio-thumb img` base styles (width/height 100%, object-fit cover)
+- `.product-section-testimonials` section: `object-fit: contain` for thumb video/img so portrait/square testimonial thumbnails show full frame without weird crop
+
+---
+
 ## v0.3.0 (2025-02-16)
 
 ### Session Summary
@@ -68,4 +91,4 @@
 
 ---
 
-## Current Version: 0.3.0
+## Current Version: 0.3.1

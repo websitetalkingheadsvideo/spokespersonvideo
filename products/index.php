@@ -7,14 +7,12 @@ require_once __DIR__ . '/../includes/video_schema_vimeo.php';
 require_once __DIR__ . '/../includes/video-types.php';
 
 $products = [
-    ['slug' => 'whiteboard', 'title' => 'Whiteboard Videos', 'bullets' => ['30 sec video - $199', '60 sec video - $399', 'Engaging hand-drawn style']],
-    ['slug' => 'animation', 'title' => 'Explainer Videos', 'bullets' => ['30–60 sec custom animations', 'Clear, compelling storytelling', 'Custom pricing']],
     ['slug' => 'presentation', 'title' => 'Spokesperson Videos', 'bullets' => ['Green screen production', 'Multiple format options', 'Professional delivery']],
+    ['slug' => 'whiteboard', 'title' => 'Whiteboard Videos', 'bullets' => ['30 sec video - $199', '60 sec video - $399', 'Engaging hand-drawn style']],
     ['slug' => 'animation', 'title' => 'Custom Animated Videos', 'bullets' => ['2D and 3D animation', 'Motion graphics', 'Brand-aligned design']],
     ['slug' => 'testimonials', 'title' => 'Testimonial Videos', 'bullets' => ['Customer success stories', 'Authentic endorsements', 'Build trust']],
     ['slug' => 'product', 'title' => 'Product Videos', 'bullets' => ['Demo and feature highlights', 'Product showcases', 'Conversion-focused']],
     ['slug' => 'motion', 'title' => 'Motion Graphics', 'bullets' => ['Titles and lower thirds', 'Data visualization', 'Kinetic typography']],
-    ['slug' => 'logo', 'title' => 'Animated Logos', 'bullets' => ['Logo animation', 'Brand identity', 'Professional polish']],
     ['slug' => 'presentation', 'title' => 'Stock Footage Videos', 'bullets' => ['Stock + voiceover', 'Cost-effective', 'Quick turnaround']],
     ['slug' => 'animation', 'title' => 'Character Animated Videos', 'bullets' => ['Character-driven storytelling', 'Memorable mascots', 'Engaging narratives']],
     ['slug' => 'specialty', 'title' => 'Drone Videos', 'bullets' => ['Aerial footage', 'Stunning perspectives', 'Professional cinematography']],
@@ -46,7 +44,7 @@ include __DIR__ . '/../includes/header.php';
             }
         }
     ?>
-    <section class="services fade-in">
+    <section class="services fade-in<?= $product['slug'] === 'testimonials' ? ' product-section-testimonials' : '' ?>">
         <div class="container">
             <div class="service-card p-4 p-lg-5">
                 <div class="row g-4 align-items-center">
@@ -54,6 +52,8 @@ include __DIR__ . '/../includes/header.php';
                     <h3 class="section-title mb-3">
                         <?php if ($product['slug'] === 'whiteboard'): ?>
                         <a href="/products/whiteboard.php" class="text-decoration-none text-dark"><?= htmlspecialchars($product['title']) ?></a>
+                        <?php elseif ($product['slug'] === 'animation'): ?>
+                        <a href="/products/animation.php" class="text-decoration-none text-dark"><?= htmlspecialchars($product['title']) ?></a>
                         <?php else: ?>
                         <?= htmlspecialchars($product['title']) ?>
                         <?php endif; ?>
@@ -63,7 +63,12 @@ include __DIR__ . '/../includes/header.php';
                         <li class="mb-2 text-secondary"><?= htmlspecialchars($bullet) ?></li>
                         <?php endforeach; ?>
                     </ul>
-                    <a href="<?= $product['slug'] === 'whiteboard' ? '/products/whiteboard.php' : '/#contact' ?>" class="btn btn-accent align-self-start">Get Info</a>
+                    <?php
+                        $getInfoHref = '/#contact';
+                        if ($product['slug'] === 'whiteboard') $getInfoHref = '/products/whiteboard.php';
+                        elseif ($product['slug'] === 'animation') $getInfoHref = '/products/animation.php';
+                        ?>
+                    <a href="<?= htmlspecialchars($getInfoHref) ?>" class="btn btn-accent align-self-start">Get Info</a>
                     </div>
                     <div class="col-lg-7">
                     <div class="row g-2">
