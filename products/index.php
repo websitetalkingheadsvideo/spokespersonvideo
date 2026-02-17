@@ -57,6 +57,8 @@ include __DIR__ . '/../includes/header.php';
                         <a href="/products/animation.php" class="text-decoration-none text-dark"><?= htmlspecialchars($product['title']) ?></a>
                         <?php elseif ($product['slug'] === 'testimonials'): ?>
                         <a href="/products/testimonials.php" class="text-decoration-none text-dark"><?= htmlspecialchars($product['title']) ?></a>
+                        <?php elseif ($product['slug'] === 'product'): ?>
+                        <a href="/products/product.php" class="text-decoration-none text-dark"><?= htmlspecialchars($product['title']) ?></a>
                         <?php else: ?>
                         <?= htmlspecialchars($product['title']) ?>
                         <?php endif; ?>
@@ -76,6 +78,8 @@ include __DIR__ . '/../includes/header.php';
                     <a href="/products/animation.php" class="btn btn-accent align-self-start">Get Info</a>
                     <?php elseif ($product['slug'] === 'testimonials'): ?>
                     <a href="/products/testimonials.php" class="btn btn-accent align-self-start">Get Info</a>
+                    <?php elseif ($product['slug'] === 'product'): ?>
+                    <a href="/products/product.php" class="btn btn-accent align-self-start">Get Info</a>
                     <?php endif; ?>
                     </div>
                     <div class="col-lg-7">

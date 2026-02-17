@@ -1,5 +1,18 @@
 # Spokesperson Video - Version History
 
+## v0.3.5 (2025-02-17)
+
+### Session Summary
+
+**Product Videos page (`products/product.php`):**
+- New page based on whiteboard.php layout: hero, examples grid (product=true), Product Videos in Action (product_content random), Custom Product Videos (use cases, deliverables), benefits, Product Demo Video explainer, questions, related styles.
+- Uses `video_type_switch('product')` for WHERE/label; related links to whiteboard, animation, video-presentation, testimonials, viral-videos.
+
+**Products index (`products/index.php`):**
+- Title and Get Info links for Product Videos point to `/products/product.php`.
+
+---
+
 ## v0.3.4 (2025-02-17)
 
 ### Session Summary
@@ -134,4 +147,4 @@
 
 ---
 
-## Current Version: 0.3.4
+## Current Version: 0.3.5
