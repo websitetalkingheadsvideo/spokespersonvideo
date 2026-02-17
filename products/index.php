@@ -7,9 +7,9 @@ require_once __DIR__ . '/../includes/video_schema_vimeo.php';
 require_once __DIR__ . '/../includes/video-types.php';
 
 $products = [
-    ['slug' => 'presentation', 'title' => 'Spokesperson Videos', 'bullets' => ['Green screen production', 'Multiple format options', 'Professional delivery']],
-    ['slug' => 'whiteboard', 'title' => 'Whiteboard Videos', 'bullets' => ['30 sec video - $199', '60 sec video - $399', 'Engaging hand-drawn style']],
-    ['slug' => 'animation', 'title' => 'Custom Animated Videos', 'bullets' => ['2D and 3D animation', 'Motion graphics', 'Brand-aligned design']],
+    ['slug' => 'presentation', 'title' => 'Video Presentation', 'bullets' => ['Green screen production with customizable backgrounds and branding.', 'Professional delivery with on-camera spokesperson.', 'Ideal for product demos, training, and marketing that needs a human face.', 'Consistent quality shot in our studio for a polished, on-brand look.']],
+    ['slug' => 'whiteboard', 'title' => 'Whiteboard Videos', 'bullets' => ['Hand-drawn visuals that turn complex ideas into clear, memorable stories.', 'Ideal for explainers, training, and product demos — viewers retain more with whiteboard storytelling.', 'Engaging hand-drawn style']],
+    ['slug' => 'animation', 'title' => 'Custom Animated Videos', 'bullets' => ['2D  animation tailored to your story and message.', 'Brand-aligned design — colors, fonts, and style that match your identity.', 'Ideal for explainers, product launches, and campaigns that stand out.', 'From concept to delivery, we handle scripting, storyboards, and final cut.']],
     ['slug' => 'testimonials', 'title' => 'Testimonial Videos', 'bullets' => ['Customer success stories', 'Authentic endorsements', 'Build trust']],
     ['slug' => 'product', 'title' => 'Product Videos', 'bullets' => ['Demo and feature highlights', 'Product showcases', 'Conversion-focused']],
     ['slug' => 'motion', 'title' => 'Motion Graphics', 'bullets' => ['Titles and lower thirds', 'Data visualization', 'Kinetic typography']],

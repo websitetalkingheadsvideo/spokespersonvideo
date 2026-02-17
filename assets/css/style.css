@@ -349,7 +349,10 @@ html { scroll-behavior: smooth; }
     object-fit: cover;
 }
 
-/* Testimonial thumbnails: show full frame (portrait/square sources) without crop */
+/* Testimonial thumbnails: portrait container so no black bars; full frame without crop */
+.product-section-testimonials .portfolio-thumb {
+    aspect-ratio: 9 / 16;
+}
 .product-section-testimonials .portfolio-thumb video,
 .product-section-testimonials .portfolio-thumb img {
     object-fit: contain;

@@ -1,5 +1,19 @@
 # Spokesperson Video - Version History
 
+## v0.3.2 (2025-02-17)
+
+### Session Summary
+
+**Products index (`products/index.php`):**
+- Renamed "Spokesperson Videos" to "Video Presentation" and expanded bullet list (5 descriptive bullets); removed "or teleprompter" from one bullet.
+- Whiteboard Videos: replaced "30 sec video - $199" / "60 sec video - $399" with two descriptive blurbs; kept "Engaging hand-drawn style."
+- Custom Animated Videos: expanded bullet list from 3 to 5 descriptive items (animation, motion graphics, brand-aligned design, use cases, full production).
+
+**Testimonial thumbnails (`assets/css/style.css`):**
+- `.product-section-testimonials .portfolio-thumb`: set `aspect-ratio: 9 / 16` so portrait testimonial videos fill the container and black bars (letterboxing) are removed.
+
+---
+
 ## v0.3.1 (2025-02-17)
 
 ### Session Summary
@@ -91,4 +105,4 @@
 
 ---
 
-## Current Version: 0.3.1
+## Current Version: 0.3.2
