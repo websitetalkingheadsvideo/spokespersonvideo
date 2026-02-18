@@ -23,7 +23,7 @@
                     <li><a href="#services">Services</a></li>
                     <li><a href="/products/">Products</a></li>
                     <li><a href="/about.php">About</a></li>
-                    <li><a href="#contact" class="btn btn-accent">Start a Project</a></li>
+                    <li><a href="/contact.php" class="btn btn-accent">Start a Project</a></li>
                 </ul>
                 <button class="mobile-menu-btn d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-label="Menu">
                     <span></span>
@@ -45,6 +45,6 @@
             <a href="#services" class="mobile-link" data-bs-dismiss="offcanvas">Services</a>
             <a href="/products/" class="mobile-link" data-bs-dismiss="offcanvas">Products</a>
             <a href="/about.php" class="mobile-link" data-bs-dismiss="offcanvas">About</a>
-            <a href="#contact" class="btn btn-accent mt-3" data-bs-dismiss="offcanvas">Start a Project</a>
+            <a href="/contact.php" class="btn btn-accent mt-3" data-bs-dismiss="offcanvas">Start a Project</a>
         </div>
     </div>

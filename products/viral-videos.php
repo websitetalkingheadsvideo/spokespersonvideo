@@ -34,7 +34,7 @@ include __DIR__ . '/../includes/header.php';
                 <div class="section-label">Video Production Style</div>
                 <h1>Viral Video Production</h1>
                 <p class="hero-sub mx-auto">Professional viral commercial production for social media marketing. Shareable video content that promotes your brand and drives traffic.</p>
-                <a href="/#contact" class="btn btn-accent">Get Info</a>
+                <a href="/contact.php" class="btn btn-accent">Get Info</a>
             </div>
         </div>
     </section>
@@ -122,7 +122,7 @@ include __DIR__ . '/../includes/header.php';
                         </ul>
                     </div>
                     <div class="col-lg-6">
-                        <a href="/#contact" class="btn btn-accent">Order Viral Video</a>
+                        <a href="/contact.php" class="btn btn-accent">Order Viral Video</a>
                     </div>
                 </div>
             </div>

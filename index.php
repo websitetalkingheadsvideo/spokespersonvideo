@@ -11,7 +11,7 @@
                 <h1>Videos that make<br>people pay attention</h1>
                 <p class="hero-sub mx-auto">We write, shoot, and produce every style of video your business needs — all under one roof in our studio.</p>
                 <div class="d-flex justify-content-center gap-3 hero-buttons">
-                    <a href="#contact" class="btn btn-accent">Start Your Project →</a>
+                    <a href="/contact.php" class="btn btn-accent">Start Your Project →</a>
                     <a href="#work" class="btn btn-outline-dark rounded-pill">See Our Work</a>
                 </div>
             </div>

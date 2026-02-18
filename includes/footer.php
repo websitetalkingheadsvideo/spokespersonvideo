@@ -11,7 +11,7 @@
                     <li><a href="#services">Services</a></li>
                     <li><a href="/products/">Products</a></li>
                     <li><a href="/about.php">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="/contact.php">Contact</a></li>
                     <li><a href="/privacy.php">Privacy</a></li>
                 </ul>
             </div>

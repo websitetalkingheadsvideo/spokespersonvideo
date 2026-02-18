@@ -1,5 +1,29 @@
 # Spokesperson Video - Version History
 
+## v0.3.7 (2025-02-17)
+
+### Session Summary
+
+**Contact page (`contact.php`):**
+- New contact page with Pipedrive web form embed (webforms.pipedrive.com).
+- Hero intro: "Start a project" / "Tell us about your video goals."
+
+**Privacy page (`privacy.php`):**
+- New privacy policy page with full content: Information Collection, Use of Information, Cookies/Third-Party Services, SMS Communications, Information Sharing, Data Security, Your Rights, California Privacy Notice, International Visitors, Updates, Contact.
+- Effective Date: January 2024. Links: sales@websitetalkingheads.com, Contact page.
+
+**Navigation / CTA updates:**
+- Header "Start a Project" (desktop + mobile) → `/contact.php`
+- Footer "Contact" → `/contact.php`
+- CTA "Book a Demo" → `/contact.php` (was mailto)
+- Home hero "Start Your Project" → `/contact.php`
+- Product pages (video-presentation, viral-videos, whiteboard, animation, testimonials, product): "Get Info" and "Order X" → `/contact.php`
+
+**Data:**
+- `data/todo.md` — Page additions todo: Contact (done), Privacy (done), FAQ (pending).
+
+---
+
 ## v0.3.6 (2025-02-17)
 
 ### Session Summary
@@ -161,4 +185,4 @@
 
 ---
 
-## Current Version: 0.3.6
+## Current Version: 0.3.7

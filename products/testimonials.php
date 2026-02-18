@@ -35,7 +35,7 @@ include __DIR__ . '/../includes/header.php';
                 <div class="section-label">Video Production Style</div>
                 <h1>Testimonial Video Production</h1>
                 <p class="hero-sub mx-auto">Customer success stories and authentic endorsements that build trust.</p>
-                <a href="/#contact" class="btn btn-accent">Get Info</a>
+                <a href="/contact.php" class="btn btn-accent">Get Info</a>
             </div>
         </div>
     </section>
@@ -123,7 +123,7 @@ include __DIR__ . '/../includes/header.php';
                         </ul>
                     </div>
                     <div class="col-lg-6">
-                        <a href="/#contact" class="btn btn-accent">Order Testimonial Video</a>
+                        <a href="/contact.php" class="btn btn-accent">Order Testimonial Video</a>
                     </div>
                 </div>
             </div>
