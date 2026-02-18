@@ -1,5 +1,34 @@
 # Spokesperson Video - Version History
 
+## v0.4.0 (2025-02-17)
+
+### Session Summary
+
+**Spokespeople page (`spokespeople/index.php`):**
+- New Spokespeople section: hero, stats (80%, 10k+, 48–72hr), grid of spokespeople with thumbnails and demo videos.
+- Thumbnails and videos from websitetalkingheads.com (posters/ and videos/ by name); video modal with Accept/focus fix for aria-hidden.
+- Grid: 5 per row on lg; crop thumbnails from bottom only (`object-position: center top`).
+- Filter: All / Men / Women (client-side via `data-gender`); works with static data or future DB.
+
+**Navigation:**
+- Replaced Services with Spokespeople in header and footer (desktop + mobile).
+- Removed Work link from header and footer.
+
+**404 and .htaccess:**
+- Custom 404 page (`404.php`): HTTP 404, header/footer, “Back to home” link.
+- `.htaccess`: `ErrorDocument 404 /404.php` for Apache.
+
+**Cookie notice:**
+- `includes/cookie-notice.php`: fixed bottom bar, “Accept” sets `cookie_consent` for 365 days; link to Privacy; included in footer.
+- `assets/css/style.css`: `.cookie-notice { z-index: 1055; }`.
+- `assets/js/main.js`: cookie read/set and show/hide logic.
+
+**Other:**
+- Spokesperson modal: `video.src` + `load()` for playback; focus returned to trigger on hide (accessibility).
+- Spokespeople section CSS: `#top-spokespeople .portfolio-thumb img { object-position: center top; }`.
+
+---
+
 ## v0.3.7 (2025-02-17)
 
 ### Session Summary
@@ -185,4 +214,4 @@
 
 ---
 
-## Current Version: 0.3.7
+## Current Version: 0.4.0

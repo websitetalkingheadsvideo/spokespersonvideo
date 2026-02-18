@@ -19,10 +19,10 @@
             <div class="nav-inner d-flex align-items-center justify-content-between">
                 <a href="/" class="logo">Talking<span>Heads</span></a>
                 <ul class="nav-links d-none d-md-flex align-items-center gap-4 list-unstyled mb-0">
-                    <li><a href="#work">Work</a></li>
-                    <li><a href="#services">Services</a></li>
+                    <li><a href="/spokespeople/">Spokespeople</a></li>
                     <li><a href="/products/">Products</a></li>
                     <li><a href="/about.php">About</a></li>
+                    <li><a href="/faq.php">FAQ</a></li>
                     <li><a href="/contact.php" class="btn btn-accent">Start a Project</a></li>
                 </ul>
                 <button class="mobile-menu-btn d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-label="Menu">
@@ -41,10 +41,10 @@
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body d-flex flex-column gap-3">
-            <a href="#work" class="mobile-link" data-bs-dismiss="offcanvas">Work</a>
-            <a href="#services" class="mobile-link" data-bs-dismiss="offcanvas">Services</a>
+            <a href="/spokespeople/" class="mobile-link" data-bs-dismiss="offcanvas">Spokespeople</a>
             <a href="/products/" class="mobile-link" data-bs-dismiss="offcanvas">Products</a>
             <a href="/about.php" class="mobile-link" data-bs-dismiss="offcanvas">About</a>
+            <a href="/faq.php" class="mobile-link" data-bs-dismiss="offcanvas">FAQ</a>
             <a href="/contact.php" class="btn btn-accent mt-3" data-bs-dismiss="offcanvas">Start a Project</a>
         </div>
     </div>

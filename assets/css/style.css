@@ -28,6 +28,9 @@
     --radius-lg: 28px;
 }
 
+/* Cookie notice: above nav */
+.cookie-notice { z-index: 1055; }
+
 /* ---- RESET & BASE ---- */
 body {
     font-family: 'Outfit', sans-serif;
@@ -348,6 +351,11 @@ html { scroll-behavior: smooth; }
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+/* Spokespeople: small thumbs, 5 per row – keep heads visible, crop from bottom only */
+#top-spokespeople .portfolio-thumb img {
+    object-position: center top;
 }
 
 /* Testimonial thumbnails: 16:9 container to match video; full frame without crop */

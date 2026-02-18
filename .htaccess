@@ -1,0 +1,2 @@
+# Custom 404 page (adjust path if site lives in a subdirectory, e.g. /spokespersonvideo/404.php)
+ErrorDocument 404 /404.php
