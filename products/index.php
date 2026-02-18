@@ -19,7 +19,7 @@ include __DIR__ . '/../includes/header.php';
 ?>
 
     <!-- PRODUCTS INTRO -->
-    <section class="services fade-in" style="padding-top: 120px;">
+    <section class="services services--intro fade-in">
         <div class="container">
             <div class="section-label">What We Make</div>
             <h2 class="section-title">Video Production Styles</h2>

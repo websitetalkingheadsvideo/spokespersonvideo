@@ -276,6 +276,7 @@ html { scroll-behavior: smooth; }
 
 /* ---- SERVICES ---- */
 .services { padding: 100px 0; }
+.services--intro { padding-top: 120px; }
 
 .service-card {
     background: var(--card);

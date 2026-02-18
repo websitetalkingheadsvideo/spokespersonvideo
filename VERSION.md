@@ -1,5 +1,19 @@
 # Spokesperson Video - Version History
 
+## v0.3.6 (2025-02-17)
+
+### Session Summary
+
+**About page (`about.php`):**
+- New root-level About page: hero, short “since 2001” copy, long content from websitetalkingheads.com (Bringing Your Website to Life, What We Do, Types of Videos, Why Spokesperson Videos Work, Tailored to Your Brand, Final Thought), Mission, quote block, “See it in action” with two Vimeo demos (1153028126, 980932658), CTA.
+- Header and footer “About” links point to `/about.php`.
+
+**CSS / rules:**
+- Removed inline style from `products/index.php` (padding-top): added `.services--intro { padding-top: 120px; }` in `assets/css/style.css`, section uses `services--intro` class.
+- `data/css_rules.md`: compliance report for css_organization and bootstrap-before-css (single violation fixed).
+
+---
+
 ## v0.3.5 (2025-02-17)
 
 ### Session Summary
@@ -147,4 +161,4 @@
 
 ---
 
-## Current Version: 0.3.5
+## Current Version: 0.3.6
