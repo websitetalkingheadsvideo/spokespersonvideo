@@ -77,10 +77,10 @@ while ($row = $videoResult->fetch_assoc()) {
             </div>
             <div class="portfolio-info">
                 <?php if ($heading !== ''): ?>
-                <h3><?= htmlspecialchars($heading) ?></h3>
+                <h3><?= $heading ?></h3>
                 <?php endif; ?>
                 <?php if ($content !== ''): ?>
-                <p class="text-secondary small mb-0 mt-1"><?= htmlspecialchars($content, ENT_QUOTES, 'UTF-8') ?></p>
+                <p class="text-secondary small mb-0 mt-1"><?= $content ?></p>
                 <?php endif; ?>
             </div>
         </div>
